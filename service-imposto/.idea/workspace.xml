@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7258de38-1e50-4a01-b24b-7aef316b9823" name="Changes" comment="Adicionando mais dependecias como o Lombok e o DevTools">
+    <list default="true" id="7258de38-1e50-4a01-b24b-7aef316b9823" name="Changes" comment="Mais Alteracoes e conclusoes do ImpostoService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/controller/ImpostoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/controller/ImpostoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/dto/ImpostoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/dto/ImpostoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/service/impostoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/service/ImpostoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,40 +22,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Gusta-code22"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Gusta-code22/arquitetura-microservices-pedidos.git&quot;,
+    &quot;accountId&quot;: &quot;ab2326b6-8e06-4eea-b254-d04b7b1ebfbd&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Gusta-code22/arquitetura-microservices-pedidos.git",
-    "accountId": "ab2326b6-8e06-4eea-b254-d04b7b1ebfbd"
-  }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="37z8mKeX7b7Y2FxOYhYsPEJ904T" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Startup.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/PC/Cursos/Estudo-Microservices/arquitetura-microservices-pedidos/service-imposto/pom.xml",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Startup.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Cursos/Estudo-Microservices/arquitetura-microservices-pedidos/service-imposto/pom.xml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Startup" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="github.io.Gusta_code22.Startup" />
@@ -107,7 +101,39 @@
       <option name="project" value="LOCAL" />
       <updated>1767895456768</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adicionando e concluindo o primerio microservice do projeto, junto com o service e controller 200% alinhados">
+      <option name="closed" value="true" />
+      <created>1767897272244</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1767897272244</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adicioando a classe InstanceInformationService para recuperar em qual ambiente esta usando nosso microservice">
+      <option name="closed" value="true" />
+      <created>1767897339201</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1767897339201</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adicioando a classe InstanceInformationService para recuperar em qual ambiente esta usando nosso microservice">
+      <option name="closed" value="true" />
+      <created>1767897404615</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1767897404615</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Mais Alteracoes e conclusoes do ImpostoService">
+      <option name="closed" value="true" />
+      <created>1767897434197</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1767897434197</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -122,7 +148,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -132,6 +170,9 @@
     <MESSAGE value="Primeiras configuracoes no projeto" />
     <MESSAGE value="Adicionando a estrutura de pacotes" />
     <MESSAGE value="Adicionando mais dependecias como o Lombok e o DevTools" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando mais dependecias como o Lombok e o DevTools" />
+    <MESSAGE value="Adicionando e concluindo o primerio microservice do projeto, junto com o service e controller 200% alinhados" />
+    <MESSAGE value="Adicioando a classe InstanceInformationService para recuperar em qual ambiente esta usando nosso microservice" />
+    <MESSAGE value="Mais Alteracoes e conclusoes do ImpostoService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mais Alteracoes e conclusoes do ImpostoService" />
   </component>
 </project>
