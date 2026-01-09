@@ -2,6 +2,7 @@ package github.io.Gusta_code22.service;
 
 import github.io.Gusta_code22.dto.ImpostoDTO;
 import github.io.Gusta_code22.enviroment.InstanceInformationService;
+import github.io.Gusta_code22.exception.MoedaNaoSuportadaException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,7 @@ public class ImpostoService {
             case "BRL" -> BigDecimal.valueOf(0.12);
             case "USD" -> BigDecimal.valueOf(0.08);
             case "EUR" -> BigDecimal.valueOf(0.10);
-            case null, default -> throw new RuntimeException("Moeda nao reconhecida");
+            case null, default -> throw new MoedaNaoSuportadaException(moeda);
         };
 
         BigDecimal imposto = valorInicial.multiply(taxa);
