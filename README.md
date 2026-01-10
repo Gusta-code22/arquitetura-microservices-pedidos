@@ -2,7 +2,7 @@
 
 ## 📌 Visão Geral
 
-Este projeto demonstra a implementação de uma **arquitetura de microsserviços** utilizando **Spring Boot**, **Spring Cloud** e **OpenFeign**, com comunicação síncrona entre serviços, separação clara de responsabilidades e foco em boas práticas para projetos distribuídos.
+Este projeto demonstra a implementação de uma **arquitetura de microsserviços** utilizando **Spring Boot**, **Spring Data JPA**, **Spring Cloud** e **OpenFeign**, com comunicação síncrona entre serviços, separação clara de responsabilidades e foco em boas práticas para projetos distribuídos.
 
 O sistema é composto por serviços independentes que se comunicam via HTTP, simulando um fluxo real de negócio envolvendo **Produto**, **Preço** e **Imposto**.
 
@@ -40,13 +40,27 @@ Cada serviço possui:
 
 * **Responsabilidade:** Orquestrar o fluxo e expor o endpoint principal ao cliente
 * **Porta:** `8001`
-* **Função:** Solicita o cálculo de preço ao serviço de Preço
+* **Função:**
+
+  * Consultar o **banco de dados SQL** para obter o produto
+  * Gerenciar a persistência via **Spring Data JPA**
+  * Controlar a versão do banco com **Flyway**
+  * Orquestrar chamadas para o serviço de Preço
+
+Fluxo interno:
+
+1. Recebe o `id` do produto e a `moeda`
+2. Busca o produto no banco de dados
+3. Envia o valor base e a moeda para o Preço Service
+4. Retorna o produto com valores calculados
 
 Endpoint de exemplo:
 
+````http
+GET /produto/{id}/{moeda}
 ```http
 GET /produto/{id}/{moeda}
-```
+````
 
 ---
 
@@ -106,8 +120,11 @@ Este cenário evidencia a importância de:
 
 * **Java 21**
 * **Spring Boot**
-* **Spring Cloud OpenFeign**
 * **Spring Web (REST)**
+* **Spring Data JPA**
+* **Spring Cloud OpenFeign**
+* **Flyway (Database Migration)**
+* **Banco de Dados SQL (MySQL)**
 * **Maven**
 * **Git & GitHub**
 
@@ -144,10 +161,12 @@ GET http://localhost:8001/produto/3/BRL
 Resposta esperada:
 
 ```json
-{
-  "valorBase": 3899.90,
-  "valorImposto": 467.99,
-  "valorFinal": 4289.90
+ {
+  "produtoId": 3,
+  "nome": "Headset Surround 7.1 USB",
+  "moeda": "BRL",
+  "valorBase": 289.5,
+  "valorFinal": 324.24
 }
 ```
 
