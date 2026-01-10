@@ -1,0 +1,18 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: service-produto
+
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/service_produto_db
+    username: root
+    password: admin123
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: none
+
+

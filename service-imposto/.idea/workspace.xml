@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7258de38-1e50-4a01-b24b-7aef316b9823" name="Changes" comment="Mais Alteracoes e conclusoes do ImpostoService">
+    <list default="true" id="7258de38-1e50-4a01-b24b-7aef316b9823" name="Changes" comment="refactor: Adicionar GlobalExceptionHandler para padronizacao de Erros">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/service/ImpostoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/service/ImpostoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/Startup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/controller/PrecoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/controller/PrecoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/proxy/PrecoProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/service/PrecoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/service/PrecoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Exception" />
         <option value="Class" />
       </list>
     </option>
@@ -133,7 +140,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767897434197</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactor: melhorar tratamento de erro de moeda inválida no imposto-service">
+      <option name="closed" value="true" />
+      <created>1767972608710</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1767972608710</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor: Adicionar GlobalExceptionHandler para padronizacao de Erros">
+      <option name="closed" value="true" />
+      <created>1767972830784</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1767972830784</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -173,6 +196,8 @@
     <MESSAGE value="Adicionando e concluindo o primerio microservice do projeto, junto com o service e controller 200% alinhados" />
     <MESSAGE value="Adicioando a classe InstanceInformationService para recuperar em qual ambiente esta usando nosso microservice" />
     <MESSAGE value="Mais Alteracoes e conclusoes do ImpostoService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mais Alteracoes e conclusoes do ImpostoService" />
+    <MESSAGE value="refactor: melhorar tratamento de erro de moeda inválida no imposto-service" />
+    <MESSAGE value="refactor: Adicionar GlobalExceptionHandler para padronizacao de Erros" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Adicionar GlobalExceptionHandler para padronizacao de Erros" />
   </component>
 </project>
