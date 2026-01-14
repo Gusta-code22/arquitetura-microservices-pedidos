@@ -1,6 +1,12 @@
 server:
   port: 8003
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8431/eureka
+
+
 spring:
 
   application:
