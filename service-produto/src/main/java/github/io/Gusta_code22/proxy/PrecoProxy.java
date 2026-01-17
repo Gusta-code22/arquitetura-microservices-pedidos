@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.math.BigDecimal;
 
-@FeignClient(name = "service-preco", url = "localhost:8002")
+@FeignClient(name = "service-preco")
 public interface PrecoProxy {
 
-    @GetMapping(value = "/preco/{valor}/{moeda}")
+    @GetMapping(value = "/service-preco/{valor}/{moeda}")
     PrecoDTO getPreco(
             @PathVariable("valor") BigDecimal valor,
             @PathVariable("moeda") String moeda);

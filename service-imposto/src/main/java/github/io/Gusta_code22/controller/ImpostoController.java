@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.math.BigDecimal;
 
 @RestController
-@RequestMapping("/imposto")
+@RequestMapping("/service-imposto")
 
 // GET /imposto/{valor}/{moeda}
 public class ImpostoController {

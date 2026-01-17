@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.math.BigDecimal;
 
-@FeignClient(name = "imposto-service", url = "localhost:8003")
+@FeignClient(name = "service-imposto")
 public interface ImpostoProxy {
 
-    @GetMapping(value = "/imposto/{valor}/{moeda}")
+    @GetMapping(value = "/service-imposto/{valor}/{moeda}")
     ImpostoDTO getImposto(
             @PathVariable("valor") BigDecimal valor,
             @PathVariable("moeda") String moeda

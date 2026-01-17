@@ -24,7 +24,7 @@ public class PrecoService {
 
         PrecoDTO precoFinal = new PrecoDTO();
         precoFinal.setValorFinal(imposto.getValorFinal());
-        precoFinal.setAmbiente(informationService.retrieveServerPort() + "FEIGN -> " + imposto.getAmbiente());
+        precoFinal.setAmbiente("PRECO PORT: " + informationService.retrieveServerPort() + " IMPOSTO PORT: " + imposto.getAmbiente());
         precoFinal.setMoeda(moeda);
         precoFinal.setValorImposto(imposto.getValorImposto());
         precoFinal.setValorBase(valor);
