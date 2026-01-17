@@ -1,0 +1,19 @@
+server:
+  port: 8900
+spring:
+  application:
+    name: api-gateway
+#  cloud:
+#      gateway:
+#        server:
+#          webflux:
+#            discovery:
+#              locator:
+#                enabled: true
+#                lower-case-service-id: true
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8431/eureka
