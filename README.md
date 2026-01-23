@@ -1,140 +1,134 @@
-Sistema de Microsserviços com Spring Boot e Spring Cloud
-📌 Visão Geral
-Este projeto demonstra a implementação de uma arquitetura de microsserviços utilizando Spring Boot, Spring Data JPA, Spring Cloud, OpenFeign, Eureka Server, Spring Cloud Gateway e SpringDoc OpenAPI (Swagger).
+# Sistema de Microsserviços com Spring Boot, Spring Cloud e Swagger
 
-A aplicação evoluiu para um cenário mais próximo de produção, incorporando:
+## 📌 Visão Geral
 
-Service Registry com Eureka Server
+Este projeto demonstra a implementação de uma **arquitetura de microsserviços** utilizando **Spring Boot**, **Spring Data JPA**, **Spring Cloud**, **OpenFeign**, **Eureka Server**, **Spring Cloud Gateway** e **Swagger/OpenAPI** para documentação das APIs.
 
-API Gateway para roteamento centralizado, service discovery e load balancing
+A aplicação foi evoluída para um cenário mais próximo de produção, incorporando:
 
-Comunicação síncrona entre microsserviços
+- **Service Registry com Eureka Server**
+- **API Gateway** para roteamento centralizado, service discovery e load balancing
+- Comunicação síncrona entre microsserviços
+- Separação clara de responsabilidades
+- Documentação automática das APIs com **Swagger UI**
+- Boas práticas para sistemas distribuídos
 
-Documentação automática de APIs com Swagger UI
+O sistema simula um fluxo real de negócio envolvendo **Produto**, **Preço** e **Imposto**.
 
-Separação clara de responsabilidades
+---
 
-Boas práticas para sistemas distribuídos
+## 🧱 Arquitetura
 
-O sistema simula um fluxo real de negócio envolvendo Produto, Preço e Imposto.
+A arquitetura segue um modelo clássico de microsserviços com **Service Discovery**, **Gateway** e **documentação desacoplada por serviço**:
 
-🧱 Arquitetura
-A arquitetura segue um modelo clássico de microsserviços com Service Discovery e Gateway:
-
-text
 Cliente
-   │
-   ▼
+│
+▼
 API Gateway (Spring Cloud Gateway)
-   │
-   ▼
+│
+▼
 Service Registry (Eureka Server)
-   │
-   │
-   ├── Produto Service
-   │        │ (Feign + Load Balancer)
-   │        ▼
-   ├── Preço Service
-   │        │ (Feign + Load Balancer)
-   │        ▼
-   └── Imposto Service
-   │        │ (Swagger: http://localhost:8001/swagger-ui.html)
-   │        ▼
-   └── Preço Service
-          │ (Swagger: http://localhost:8002/swagger-ui.html)
-Principais características da arquitetura:
-O cliente acessa apenas o API Gateway
+│
+├── Produto Service
+│ │ (Feign + Load Balancer + Swagger)
+│ ▼
+├── Preço Service
+│ │ (Feign + Load Balancer + Swagger)
+│ ▼
+└── Imposto Service
 
-O Gateway resolve as rotas dinamicamente via Eureka Server
+markdown
+Copiar código
 
-Os microsserviços não conhecem endereços físicos (host/porta) uns dos outros
+### Principais características da arquitetura
 
-Swagger UI disponível diretamente nos serviços
+- O cliente consome os serviços preferencialmente via **API Gateway**
+- O Gateway resolve as rotas dinamicamente via **Eureka Server**
+- Os microsserviços não conhecem host/porta fixos
+- O **load balancing** é automático
+- Cada microsserviço possui **Swagger próprio**, acessível diretamente pela sua porta
 
-O load balancing é feito automaticamente pelo Spring Cloud
+---
 
-🧩 Componentes do Sistema
-🟣 Eureka Server (Service Registry)
-Responsabilidade: Registrar e gerenciar todos os microsserviços
+## 🧩 Componentes do Sistema
 
-Porta: 8431
+### 🟣 Eureka Server (Service Registry)
 
-Função:
+- **Responsabilidade:** Registro e gerenciamento dos microsserviços  
+- **Porta:** `8431`  
 
-Centralizar o registro de instâncias
+**Funções:**
 
-Permitir service discovery dinâmico
+- Centralizar o registro de instâncias
+- Permitir service discovery dinâmico
+- Servir de base para o load balancing
 
-Base para o load balancing
+Dashboard:
 
-Acesso ao dashboard:
-
-text
 http://localhost:8431
-🟡 API Gateway
-Tecnologia: Spring Cloud Gateway (WebFlux)
 
-Porta: 8900
+markdown
+Copiar código
 
-Responsabilidade:
+---
 
-Roteamento centralizado
+### 🟡 API Gateway
 
-Integração com Eureka Server
+- **Tecnologia:** Spring Cloud Gateway (WebFlux)
+- **Porta:** `8900`
+- **Responsabilidade:**
+  - Roteamento centralizado
+  - Integração com Eureka Server
+  - Load balancing automático
 
-Load balancing automático
+Configuração baseada em service discovery:
 
-Exemplo de configuração baseada em service discovery:
+- `spring.cloud.gateway.discovery.locator.enabled=true`
+- Rotas baseadas no nome lógico do serviço
 
-Roteamento dinâmico via spring.cloud.gateway.discovery.locator.enabled=true
+Exemplo de acesso via Gateway:
 
-URLs baseadas no nome do serviço registrado no Eureka
-
-Exemplo de acesso:
-
-text
+```http
 GET http://localhost:8900/service-produto/produto/3/BRL
 🟢 Produto Service
 Responsabilidade: Orquestrar o fluxo principal do sistema
 
 Porta: 8001
 
-Swagger UI: http://localhost:8001/swagger-ui.html
+Funções:
 
-Função:
+Consulta ao banco de dados SQL
 
-Consultar o banco de dados SQL para obter o produto
+Persistência com Spring Data JPA
 
-Gerenciar persistência com Spring Data JPA
+Versionamento com Flyway
 
-Versionar o banco com Flyway
+Comunicação com Preço Service via Feign
 
-Orquestrar chamadas para o Preço Service via Feign
+Exposição de endpoints documentados com Swagger
 
-Documentação automática com OpenAPI 3
+Endpoint principal:
 
-Fluxo interno:
-
-Recebe o id do produto e a moeda
-
-Busca o produto no banco de dados
-
-Envia o valor base e a moeda para o Preço Service
-
-Retorna o produto com valores calculados
-
-Endpoint interno:
-
-text
+http
+Copiar código
 GET /service-produto/{id}/{moeda}
+Swagger – Produto Service
+A documentação da API do Produto Service está disponível em:
+
+bash
+Copiar código
+http://localhost:8001/swagger-ui.html
+ou
+
+bash
+Copiar código
+http://localhost:8001/swagger-ui/index.html
 🔵 Preço Service
 Responsabilidade: Calcular o preço final do produto
 
 Porta: 8002
 
-Swagger UI: http://localhost:8002/swagger-ui.html
-
-Função:
+Funções:
 
 Receber o valor base
 
@@ -142,56 +136,51 @@ Consultar o Imposto Service
 
 Compor o valor final
 
-Documentação automática dos endpoints
+Expor endpoints documentados com Swagger
 
-Endpoint interno:
+Swagger – Preço Service
+A documentação da API do Preço Service está disponível em:
 
-text
-GET /service-preco/{valor}/{moeda}
+bash
+Copiar código
+http://localhost:8002/swagger-ui.html
+ou
+
+bash
+Copiar código
+http://localhost:8002/swagger-ui/index.html
 🟠 Imposto Service
 Responsabilidade: Calcular impostos com base no valor e na moeda
 
 Porta: 8003
 
-Swagger UI: http://localhost:8003/swagger-ui.html
-
-Função:
+Funções:
 
 Aplicar regras fiscais
 
 Validar moedas suportadas (BRL, USD, EUR)
 
-Documentação automática dos endpoints
-
-Endpoint interno:
-
-text
-GET /service-imposto/{valor}/{moeda}
-📋 Como Acessar a Documentação Swagger
-Serviço	Porta	Swagger UI
-Produto Service	8001	http://localhost:8001/swagger-ui.html
-Preço Service	8002	http://localhost:8002/swagger-ui.html
-Imposto Service	8003	http://localhost:8003/swagger-ui.html
-OpenAPI JSON: Adicione /v3/api-docs no final da URL (ex: http://localhost:8001/v3/api-docs)
-
 🔗 Comunicação entre Serviços
-A comunicação entre microsserviços é realizada com Spring Cloud OpenFeign, totalmente integrada ao Eureka Server:
+A comunicação entre microsserviços é realizada com Spring Cloud OpenFeign, integrada ao Eureka Server:
 
-Os serviços se comunicam usando apenas o nome lógico
+Comunicação via nome lógico do serviço
 
-O load balancing é feito automaticamente
+Load balancing automático
 
-Nenhuma URL fixa é necessária
+Ausência de URLs físicas fixas
 
 Exemplo:
 
 java
+Copiar código
 @FeignClient(name = "service-imposto")
 public interface ImpostoProxy {
 
     @GetMapping("/service-imposto/{valor}/{moeda}")
-    BigDecimal calcularImposto(@PathVariable BigDecimal valor,
-                               @PathVariable String moeda);
+    BigDecimal calcularImposto(
+        @PathVariable BigDecimal valor,
+        @PathVariable String moeda
+    );
 }
 ⚠️ Tratamento de Erros
 O projeto demonstra cenários comuns em sistemas distribuídos:
@@ -200,7 +189,13 @@ Erros de validação retornam HTTP 400
 
 Falta de tratamento adequado no Feign pode resultar em HTTP 500
 
-Swagger documenta todos os códigos de resposta (200, 400, 404, 500)
+Boas práticas reforçadas:
+
+Validação consistente
+
+Tratamento global de exceções
+
+Padronização de respostas de erro
 
 🛠️ Tecnologias Utilizadas
 Java 21
@@ -215,11 +210,11 @@ Spring Cloud Netflix Eureka
 
 Spring Cloud OpenFeign
 
-SpringDoc OpenAPI (Swagger UI)
-
 Spring Data JPA
 
 Flyway
+
+Swagger / OpenAPI
 
 Banco de Dados SQL (MySQL)
 
@@ -237,6 +232,7 @@ Git
 
 Ordem de Inicialização
 bash
+Copiar código
 # 1. Eureka Server
 mvn spring-boot:run
 
@@ -245,19 +241,16 @@ mvn spring-boot:run
 
 # 3. Microsserviços
 mvn spring-boot:run
-Verificar Swagger
-Após inicializar, acesse:
+A ordem correta é essencial para o registro no Eureka Server.
 
-text
-Produto: http://localhost:8001/swagger-ui.html
-Preço:   http://localhost:8002/swagger-ui.html
-Imposto: http://localhost:8003/swagger-ui.html
 🧪 Exemplo de Requisição via Gateway
-text
+http
+Copiar código
 GET http://localhost:8900/service-produto/produto/3/BRL
 Resposta esperada:
 
 json
+Copiar código
 {
   "produtoId": 3,
   "nome": "Headset Surround 7.1 USB",
@@ -272,13 +265,13 @@ Arquitetura de microsserviços
 
 Service Discovery com Eureka
 
-API Gateway e roteamento
+API Gateway
 
 Load balancing
 
 Comunicação entre serviços
 
-Documentação automática com Swagger/OpenAPI
+Documentação de APIs com Swagger
 
 Boas práticas com Spring Cloud
 
@@ -287,4 +280,4 @@ Gustavo Miranda Brito
 GitHub: Gusta-code22
 
 📄 Licença
-Este projeto é livre para fins educacionais e de estudo.
+Projeto livre para fins educacionais e de estudo.
