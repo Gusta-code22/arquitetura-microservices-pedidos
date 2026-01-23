@@ -1,11 +1,24 @@
 server:
   port: 8002
 
+spring:
+  application:
+    name: service-preco
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8431/eureka
 
-spring:
-  application:
-    name: service-preco
+resilience4j:
+  retry:
+    instances:
+      service-preco:
+        max-attempts: 5
+        wait-duration: 1s
+        enable-exponential-backoff: true
+  circuitbreaker:
+    instances:
+      service-preco:
+        record-exceptions:
+          - feign.FeignException
