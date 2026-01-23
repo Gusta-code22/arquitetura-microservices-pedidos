@@ -85,7 +85,7 @@ Exemplo de configuração baseada em service discovery:
 Exemplo de acesso:
 
 ```
-GET http://localhost:8765/produto-service/produto/3/BRL
+GET http://localhost:8765/service-produto/produto/3/BRL
 ```
 
 ---
@@ -111,7 +111,7 @@ Fluxo interno:
 Endpoint interno:
 
 ```http
-GET /produto-service/{id}/{moeda}
+GET /service-produto/{id}/{moeda}
 ```
 
 ---
@@ -220,7 +220,7 @@ A ordem correta é essencial para o registro no Eureka.
 ## 🧪 Exemplo de Requisição via Gateway
 
 ```http
-GET http://localhost:8765/produto-service/produto/3/BRL
+GET http://localhost:8765/service-produto/produto/3/BRL
 ```
 
 Resposta esperada:
