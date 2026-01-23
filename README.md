@@ -2,50 +2,104 @@
 
 ## 📌 Visão Geral
 
-Este projeto demonstra a implementação de uma **arquitetura de microsserviços** utilizando **Spring Boot**, **Spring Data JPA**, **Spring Cloud** e **OpenFeign**, com comunicação síncrona entre serviços, separação clara de responsabilidades e foco em boas práticas para projetos distribuídos.
+Este projeto demonstra a implementação de uma **arquitetura de microsserviços** utilizando **Spring Boot**, **Spring Data JPA**, **Spring Cloud**, **OpenFeign**, **Eureka Server** e **Spring Cloud Gateway**.
 
-O sistema é composto por serviços independentes que se comunicam via HTTP, simulando um fluxo real de negócio envolvendo **Produto**, **Preço** e **Imposto**.
+A aplicação evoluiu para um cenário mais próximo de produção, incorporando:
+
+* **Service Registry com Eureka Server**
+* **API Gateway** para **roteamento centralizado**, **service discovery** e **load balancing**
+* Comunicação síncrona entre microsserviços
+* Separação clara de responsabilidades
+* Boas práticas para sistemas distribuídos
+
+O sistema simula um fluxo real de negócio envolvendo **Produto**, **Preço** e **Imposto**.
 
 ---
 
 ## 🧱 Arquitetura
 
-A arquitetura segue o padrão clássico de microsserviços:
+A arquitetura segue um modelo clássico de microsserviços com **Service Discovery** e **Gateway**:
 
 ```
 Cliente
    │
    ▼
-Produto Service
-   │ (Feign)
+API Gateway (Spring Cloud Gateway)
+   │
    ▼
-Preço Service
-   │ (Feign)
-   ▼
-Imposto Service
+Service Registry (Eureka Server)
+   │
+   ├── Produto Service
+   │        │ (Feign + Load Balancer)
+   │        ▼
+   ├── Preço Service
+   │        │ (Feign + Load Balancer)
+   │        ▼
+   └── Imposto Service
 ```
 
-Cada serviço possui:
+### Principais características da arquitetura:
 
-* Porta dedicada
-* Responsabilidade única
-* Comunicação via REST
-* Contratos bem definidos
+* O **cliente acessa apenas o API Gateway**
+* O Gateway resolve as rotas dinamicamente via **Eureka Server**
+* Os microsserviços **não conhecem endereços físicos (host/porta)** uns dos outros
+* O **load balancing é feito automaticamente** pelo Spring Cloud
 
 ---
 
-## 🧩 Microsserviços
+## 🧩 Componentes do Sistema
+
+### 🟣 Eureka Server (Service Registry)
+
+* **Responsabilidade:** Registrar e gerenciar todos os microsserviços
+* **Porta:** `8431`
+* **Função:**
+
+  * Centralizar o registro de instâncias
+  * Permitir **service discovery dinâmico**
+  * Base para o load balancing
+
+Acesso ao dashboard:
+
+```
+http://localhost:8431
+```
+
+---
+
+### 🟡 API Gateway
+
+* **Tecnologia:** Spring Cloud Gateway (WebFlux)
+* **Porta:** `8900`
+* **Responsabilidade:**
+
+  * Roteamento centralizado
+  * Integração com Eureka Server
+  * Load balancing automático
+
+Exemplo de configuração baseada em service discovery:
+
+* Roteamento dinâmico via `spring.cloud.gateway.discovery.locator.enabled=true`
+* URLs baseadas no **nome do serviço registrado no Eureka**
+
+Exemplo de acesso:
+
+```
+GET http://localhost:8765/produto-service/produto/3/BRL
+```
+
+---
 
 ### 🟢 Produto Service
 
-* **Responsabilidade:** Orquestrar o fluxo e expor o endpoint principal ao cliente
+* **Responsabilidade:** Orquestrar o fluxo principal do sistema
 * **Porta:** `8001`
 * **Função:**
 
   * Consultar o **banco de dados SQL** para obter o produto
-  * Gerenciar a persistência via **Spring Data JPA**
-  * Controlar a versão do banco com **Flyway**
-  * Orquestrar chamadas para o serviço de Preço
+  * Gerenciar persistência com **Spring Data JPA**
+  * Versionar o banco com **Flyway**
+  * Orquestrar chamadas para o Preço Service via Feign
 
 Fluxo interno:
 
@@ -54,13 +108,11 @@ Fluxo interno:
 3. Envia o valor base e a moeda para o Preço Service
 4. Retorna o produto com valores calculados
 
-Endpoint de exemplo:
+Endpoint interno:
 
-````http
-GET /produto/{id}/{moeda}
 ```http
-GET /produto/{id}/{moeda}
-````
+GET /produto-service/{id}/{moeda}
+```
 
 ---
 
@@ -68,32 +120,40 @@ GET /produto/{id}/{moeda}
 
 * **Responsabilidade:** Calcular o preço final do produto
 * **Porta:** `8002`
-* **Função:** Integra-se com o serviço de Imposto para compor o valor final
+* **Função:**
+
+  * Receber o valor base
+  * Consultar o Imposto Service
+  * Compor o valor final
 
 ---
 
 ### 🟠 Imposto Service
 
-* **Responsabilidade:** Calcular imposto com base no valor e na moeda (BRL, USD, EUR)
+* **Responsabilidade:** Calcular impostos com base no valor e na moeda
 * **Porta:** `8003`
-* **Função:** Aplicar regras fiscais e validações
+* **Função:**
+
+  * Aplicar regras fiscais
+  * Validar moedas suportadas (BRL, USD, EUR)
 
 ---
 
 ## 🔗 Comunicação entre Serviços
 
-A comunicação é feita utilizando **Spring Cloud OpenFeign**, permitindo chamadas HTTP de forma declarativa:
+A comunicação entre microsserviços é realizada com **Spring Cloud OpenFeign**, totalmente integrada ao **Eureka Server**:
 
-* Menos código boilerplate
-* Integração nativa com Spring
-* Tratamento de erros via exceções
+* Os serviços se comunicam usando apenas o **nome lógico**
+* O **load balancing** é feito automaticamente
+* Nenhuma URL fixa é necessária
 
-Exemplo conceitual:
+Exemplo:
 
 ```java
-@FeignClient(name = "imposto-service")
+@FeignClient(name = "service-imposto")
 public interface ImpostoProxy {
-    @GetMapping("/imposto/{valor}/{moeda}")
+
+    @GetMapping("/service-imposto/{valor}/{moeda}")
     BigDecimal calcularImposto(@PathVariable BigDecimal valor,
                                @PathVariable String moeda);
 }
@@ -103,15 +163,15 @@ public interface ImpostoProxy {
 
 ## ⚠️ Tratamento de Erros
 
-O projeto demonstra um comportamento comum em sistemas distribuídos:
+O projeto demonstra cenários comuns em sistemas distribuídos:
 
-* Erros de validação (ex: moeda inválida) retornam **HTTP 400**
-* Falta de tratamento no Feign resulta em **HTTP 500** no serviço chamador
+* Erros de validação retornam **HTTP 400**
+* Falta de tratamento adequado no Feign pode resultar em **HTTP 500**
 
-Este cenário evidencia a importância de:
+Esse comportamento reforça a importância de:
 
-* Validação de entrada
-* Tratamento de exceções
+* Validação consistente
+* Tratamento global de exceções
 * Padronização de respostas de erro
 
 ---
@@ -120,10 +180,12 @@ Este cenário evidencia a importância de:
 
 * **Java 21**
 * **Spring Boot**
-* **Spring Web (REST)**
-* **Spring Data JPA**
+* **Spring Web / WebFlux**
+* **Spring Cloud Gateway**
+* **Spring Cloud Netflix Eureka**
 * **Spring Cloud OpenFeign**
-* **Flyway (Database Migration)**
+* **Spring Data JPA**
+* **Flyway**
 * **Banco de Dados SQL (MySQL)**
 * **Maven**
 * **Git & GitHub**
@@ -138,30 +200,33 @@ Este cenário evidencia a importância de:
 * Maven
 * Git
 
-### Passos
+### Ordem de Inicialização
 
 ```bash
-# Clonar o repositório
-git clone https://github.com/Gusta-code22/microservices-spring-cloud-and-java-erudio.git
+# 1. Eureka Server
+mvn spring-boot:run
 
-# Entrar em cada serviço e iniciar
+# 2. API Gateway
+mvn spring-boot:run
+
+# 3. Microsserviços
 mvn spring-boot:run
 ```
 
-Inicie os serviços respeitando as portas configuradas.
+A ordem correta é essencial para o registro no Eureka.
 
 ---
 
-## 🧪 Exemplo de Requisição
+## 🧪 Exemplo de Requisição via Gateway
 
 ```http
-GET http://localhost:8001/produto/3/BRL
+GET http://localhost:8765/produto-service/produto/3/BRL
 ```
 
 Resposta esperada:
 
 ```json
- {
+{
   "produtoId": 3,
   "nome": "Headset Surround 7.1 USB",
   "moeda": "BRL",
@@ -176,10 +241,11 @@ Resposta esperada:
 
 Este projeto foi desenvolvido com foco em **aprendizado prático**, abordando:
 
-* Comunicação entre microsserviços
-* Uso real de Feign
-* Propagação de erros
-* Organização de camadas
+* Arquitetura de microsserviços
+* Service Discovery com Eureka
+* API Gateway e roteamento
+* Load balancing
+* Comunicação entre serviços
 * Boas práticas com Spring Cloud
 
 ---
