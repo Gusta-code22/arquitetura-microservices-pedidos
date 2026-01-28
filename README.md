@@ -2,16 +2,16 @@
 
 ## 📌 Visão Geral
 
-Este projeto demonstra a implementação de uma **arquitetura de microsserviços** utilizando **Spring Boot**, **Spring Data JPA**, **Spring Cloud**, **OpenFeign**, **Eureka Server**, **Spring Cloud Gateway** e **SpringDoc OpenAPI (Swagger)"".
+Este projeto demonstra a implementação de uma **arquitetura de microsserviços** utilizando **Spring Boot**, **Spring Data JPA**, **Spring Cloud**, **OpenFeign**, **Eureka Server**, **Spring Cloud Gateway** e **SpringDoc OpenAPI (Swagger)**. [web:153][web:22]
 
 A aplicação evoluiu para um cenário mais próximo de produção, incorporando:
 
-* **Service Registry com Eureka Server**
-* **API Gateway** para **roteamento centralizado**, **service discovery** e **load balancing**
-* **Documentação automática de APIs com Swagger UI**
-* Comunicação síncrona entre microsserviços
-* Separação clara de responsabilidades
-* Boas práticas para sistemas distribuídos
+- **Service Registry com Eureka Server**
+- **API Gateway** para **roteamento centralizado**, **service discovery** e **load balancing**
+- **Documentação automática de APIs com Swagger UI**
+- Comunicação síncrona entre microsserviços
+- Separação clara de responsabilidades
+- Boas práticas para sistemas distribuídos
 
 O sistema simula um fluxo real de negócio envolvendo **Produto**, **Preço** e **Imposto**.
 
@@ -21,25 +21,21 @@ O sistema simula um fluxo real de negócio envolvendo **Produto**, **Preço** e 
 
 A arquitetura segue um modelo clássico de microsserviços com **Service Discovery** e **Gateway**:
 
-```
+```text
 Cliente
    │
    ▼
-API Gateway (Spring Cloud Gateway)
+API Gateway (Spring Cloud Gateway / WebFlux)  [porta 8900]
    │
    ▼
-Service Registry (Eureka Server)
+Service Registry (Eureka Server)             [porta 8431]
    │
-   ├── Produto Service (Swagger: http://localhost:8001/swagger-ui.html)
-   │        │ (Feign + Load Balancer)
-   │        ▼
-   ├── Preço Service (Swagger: http://localhost:8002/swagger-ui.html)
-   │        │ (Feign + Load Balancer)
-   │        ▼
-   └── Imposto Service
+   ├── Service Produto  (porta 8001)  ── Swagger: http://localhost:8001/swagger-ui.html
+   ├── Service Preço    (porta 8002)  ── Swagger: http://localhost:8002/swagger-ui.html
+   └── Service Imposto  (porta 8003)  ── Swagger: http://localhost:8003/swagger-ui.html
 ```
 
-### Principais características da arquitetura:
+### Principais características da arquitetura
 
 * O **cliente acessa apenas o API Gateway**
 * O Gateway resolve as rotas dinamicamente via **Eureka Server**
@@ -79,6 +75,13 @@ http://localhost:8431
   * Integração com Eureka Server
   * Load balancing automático
 
+ * Swagger no Gateway (centralizado)
+   O Gateway também expõe um Swagger UI centralizado para alternar entre as documentações dos microsserviços (dropdown). [web:153]
+
+   ```
+    http://localhost:8900/swagger-ui.html
+   ```
+
 Exemplo de configuração baseada em service discovery:
 
 * Roteamento dinâmico via `spring.cloud.gateway.discovery.locator.enabled=true`
@@ -87,16 +90,17 @@ Exemplo de configuração baseada em service discovery:
 Exemplo de acesso:
 
 ```
-GET http://localhost:8765/produto-service/produto/3/BRL
+GET http://localhost:8900/produto-service/produto/3/BRL
 ```
 
 ---
 
-### 🟢 Produto Service
+### 🟢 Service Produto
 
 * **Responsabilidade:** Orquestrar o fluxo principal do sistema
 * **Porta:** `8001`
 * **Swagger UI:** `http://localhost:8001/swagger-ui.html`
+* **OpenAPI JSON** `http://localhost:8001/v3/api-docs `
 * **Função:**
 
   * Consultar o **banco de dados SQL** para obter o produto
@@ -120,11 +124,12 @@ GET /produto-service/{id}/{moeda}
 
 ---
 
-### 🔵 Preço Service
+### 🔵 Service Preço
 
 * **Responsabilidade:** Calcular o preço final do produto
 * **Porta:** `8002`
 * **Swagger UI:** `http://localhost:8002/swagger-ui.html`
+* **OpenAPI JSON** `http://localhost:8002/v3/api-docs `
 * **Função:**
 
   * Receber o valor base
@@ -133,16 +138,33 @@ GET /produto-service/{id}/{moeda}
 
 ---
 
-### 🟠 Imposto Service
+### 🟠 Service Imposto
 
 * **Responsabilidade:** Calcular impostos com base no valor e na moeda
 * **Porta:** `8003`
+* **Swagger UI:** `http://localhost:8003/swagger-ui.html`
+* **OpenAPI JSON** `http://localhost:8003/v3/api-docs `
 * **Função:**
 
   * Aplicar regras fiscais
   * Validar moedas suportadas (BRL, USD, EUR)
 
 ---
+
+### 📑 Documentação (SpringDoc / Swagger)
+A documentação é gerada automaticamente pelo SpringDoc OpenAPI, que expõe por padrão:
+
+*OpenAPI JSON em /v3/api-docs *
+
+*Swagger UI em /swagger-ui.html (ou /swagger-ui/index.html dependendo do setup)*
+
+---
+
+ ###🌐 CORS (para Swagger “Try it out”)
+
+Para permitir que o Swagger UI execute chamadas (“Try it out”) sem bloqueio do navegador,
+o projeto configura CORS no API Gateway usando globalcors (política aplicada a todas as rotas).
+
 
 ## 🔗 Comunicação entre Serviços
 
@@ -225,8 +247,10 @@ Verificar Swagger
 Após inicializar, acesse:
 
 ```bash
-Produto: http://localhost:8001/swagger-ui.html
-Preço:   http://localhost:8002/swagger-ui.html
+Produto (8001): http://localhost:8001/swagger-ui.html
+Preço   (8002): http://localhost:8002/swagger-ui.html
+Imposto (8003): http://localhost:8003/swagger-ui.html
+Gateway (8900): http://localhost:8900/swagger-ui.html
 ```
 
 A ordem correta é essencial para o registro no Eureka.
@@ -236,7 +260,7 @@ A ordem correta é essencial para o registro no Eureka.
 ## 🧪 Exemplo de Requisição via Gateway
 
 ```http
-GET http://localhost:8765/produto-service/produto/3/BRL
+GET http://localhost:8900/produto-service/produto/3/BRL
 ```
 
 Resposta esperada:
