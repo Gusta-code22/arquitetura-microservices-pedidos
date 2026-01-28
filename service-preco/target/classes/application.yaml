@@ -22,3 +22,9 @@ resilience4j:
       service-preco:
         record-exceptions:
           - feign.FeignException
+
+springdoc:
+  api-docs:
+    path: /service-preco/v3/api-docs    # ✅ JSON aqui
+  swagger-ui:
+    url: /service-preco/v3/api-docs

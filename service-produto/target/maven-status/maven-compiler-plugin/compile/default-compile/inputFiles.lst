@@ -1,0 +1,12 @@
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\common\GlobalExceptionHandler.java
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\config\WebConfig.java
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\controller\ProdutoController.java
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\dto\PrecoDTO.java
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\dto\ProdutoDto.java
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\entity\Produto.java
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\exception\MoedaInvalidaException.java
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\exception\ProdutoNaoEncontradoException.java
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\proxy\PrecoProxy.java
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\repository\ProdutoRepository.java
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\service\ProdutoService.java
+C:\Users\PC\Cursos\Estudo-Microservices\arquitetura-microservices-pedidos\service-produto\src\main\java\github\io\Gusta_code22\Startup.java

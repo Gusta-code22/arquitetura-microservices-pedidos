@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7258de38-1e50-4a01-b24b-7aef316b9823" name="Changes" comment="refactor: Adicionar GlobalExceptionHandler para padronizacao de Erros">
+      <change beforePath="$PROJECT_DIR$/../api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/github/io/Gusta_code22/config/ApiGatewayConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/github/io/Gusta_code22/config/ApiGatewayConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/github/io/Gusta_code22/Startup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/github/io/Gusta_code22/config/ApiGatewayConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/github/io/Gusta_code22/filter/LoggingFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/target/classes/github/io/Gusta_code22/Startup.class" beforeDir="false" afterPath="$PROJECT_DIR$/../naming-server/target/classes/github/io/Gusta_code22/Startup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/common/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/Startup.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/common/GlobalExceptionHandler.class" beforeDir="false" />
@@ -16,7 +26,31 @@
       <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/exception/MoedaNaoSuportadaException.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/service/ImpostoService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-preco/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/Startup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/controller/PrecoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/dto/ImpostoDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/dto/PrecoDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/enviroment/InstanceInformationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/proxy/ImpostoProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/service/PrecoService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-produto/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-produto/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-produto/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/db/migration/V1__create_table_produto.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/db/migration/V2__insert_produtos.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/Startup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/common/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/controller/ProdutoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/dto/PrecoDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/dto/ProdutoDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/entity/Produto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/exception/MoedaInvalidaException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/exception/ProdutoNaoEncontradoException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/proxy/PrecoProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/repository/ProdutoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/service/ProdutoService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +89,7 @@
   &quot;keyToString&quot;: {
     &quot;Application.Startup 8903.executor&quot;: &quot;Run&quot;,
     &quot;Application.Startup.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.service-imposto [clean,install].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,

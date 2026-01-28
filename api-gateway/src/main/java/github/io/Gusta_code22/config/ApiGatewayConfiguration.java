@@ -1,3 +1,9 @@
+/**
+ * Essa Classe nao se torna nescessario já que adicionamos essa mesma funcionalidade no YAML
+ * podemos entao remover esse Hard-code
+ */
+
+/*
 package github.io.Gusta_code22.config;
 
 import org.springframework.cloud.gateway.route.RouteLocator;
@@ -19,3 +25,5 @@ public class ApiGatewayConfiguration {
                 .build();
     }
 }
+*/
+
