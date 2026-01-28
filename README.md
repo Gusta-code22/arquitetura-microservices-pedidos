@@ -166,6 +166,8 @@ Para permitir que o Swagger UI execute chamadas (“Try it out”) sem bloqueio 
 o projeto configura CORS no API Gateway usando globalcors (política aplicada a todas as rotas).
 
 
+---
+
 ## 🔗 Comunicação entre Serviços
 
 A comunicação entre microsserviços é realizada com **Spring Cloud OpenFeign**, totalmente integrada ao **Eureka Server**:
