@@ -2,12 +2,13 @@
 
 ## 📌 Visão Geral
 
-Este projeto demonstra a implementação de uma **arquitetura de microsserviços** utilizando **Spring Boot**, **Spring Data JPA**, **Spring Cloud**, **OpenFeign**, **Eureka Server** e **Spring Cloud Gateway**.
+Este projeto demonstra a implementação de uma **arquitetura de microsserviços** utilizando **Spring Boot**, **Spring Data JPA**, **Spring Cloud**, **OpenFeign**, **Eureka Server**, **Spring Cloud Gateway** e **SpringDoc OpenAPI (Swagger)"".
 
 A aplicação evoluiu para um cenário mais próximo de produção, incorporando:
 
 * **Service Registry com Eureka Server**
 * **API Gateway** para **roteamento centralizado**, **service discovery** e **load balancing**
+* **Documentação automática de APIs com Swagger UI**
 * Comunicação síncrona entre microsserviços
 * Separação clara de responsabilidades
 * Boas práticas para sistemas distribuídos
@@ -29,10 +30,10 @@ API Gateway (Spring Cloud Gateway)
    ▼
 Service Registry (Eureka Server)
    │
-   ├── Produto Service
+   ├── Produto Service (Swagger: http://localhost:8001/swagger-ui.html)
    │        │ (Feign + Load Balancer)
    │        ▼
-   ├── Preço Service
+   ├── Preço Service (Swagger: http://localhost:8002/swagger-ui.html)
    │        │ (Feign + Load Balancer)
    │        ▼
    └── Imposto Service
@@ -43,6 +44,7 @@ Service Registry (Eureka Server)
 * O **cliente acessa apenas o API Gateway**
 * O Gateway resolve as rotas dinamicamente via **Eureka Server**
 * Os microsserviços **não conhecem endereços físicos (host/porta)** uns dos outros
+* **Swagger UI disponível diretamente nos serviços**
 * O **load balancing é feito automaticamente** pelo Spring Cloud
 
 ---
@@ -85,7 +87,7 @@ Exemplo de configuração baseada em service discovery:
 Exemplo de acesso:
 
 ```
-GET http://localhost:8765/service-produto/produto/3/BRL
+GET http://localhost:8765/produto-service/produto/3/BRL
 ```
 
 ---
@@ -94,12 +96,14 @@ GET http://localhost:8765/service-produto/produto/3/BRL
 
 * **Responsabilidade:** Orquestrar o fluxo principal do sistema
 * **Porta:** `8001`
+* **Swagger UI:** `http://localhost:8001/swagger-ui.html`
 * **Função:**
 
   * Consultar o **banco de dados SQL** para obter o produto
   * Gerenciar persistência com **Spring Data JPA**
   * Versionar o banco com **Flyway**
   * Orquestrar chamadas para o Preço Service via Feign
+  * **Documentação automática com OpenAPI 3**
 
 Fluxo interno:
 
@@ -111,7 +115,7 @@ Fluxo interno:
 Endpoint interno:
 
 ```http
-GET /service-produto/{id}/{moeda}
+GET /produto-service/{id}/{moeda}
 ```
 
 ---
@@ -120,6 +124,7 @@ GET /service-produto/{id}/{moeda}
 
 * **Responsabilidade:** Calcular o preço final do produto
 * **Porta:** `8002`
+* **Swagger UI:** `http://localhost:8002/swagger-ui.html`
 * **Função:**
 
   * Receber o valor base
@@ -167,12 +172,14 @@ O projeto demonstra cenários comuns em sistemas distribuídos:
 
 * Erros de validação retornam **HTTP 400**
 * Falta de tratamento adequado no Feign pode resultar em **HTTP 500**
+* Swagger documenta todos os códigos de resposta **(200, 400, 404, 500)**
 
 Esse comportamento reforça a importância de:
 
 * Validação consistente
 * Tratamento global de exceções
 * Padronização de respostas de erro
+* Documentação da API REST
 
 ---
 
@@ -182,6 +189,7 @@ Esse comportamento reforça a importância de:
 * **Spring Boot**
 * **Spring Web / WebFlux**
 * **Spring Cloud Gateway**
+* **SpringDoc OpenAPI (Swagger UI)**
 * **Spring Cloud Netflix Eureka**
 * **Spring Cloud OpenFeign**
 * **Spring Data JPA**
@@ -212,6 +220,14 @@ mvn spring-boot:run
 # 3. Microsserviços
 mvn spring-boot:run
 ```
+Verificar Swagger
+
+Após inicializar, acesse:
+
+```bash
+Produto: http://localhost:8001/swagger-ui.html
+Preço:   http://localhost:8002/swagger-ui.html
+```
 
 A ordem correta é essencial para o registro no Eureka.
 
@@ -220,7 +236,7 @@ A ordem correta é essencial para o registro no Eureka.
 ## 🧪 Exemplo de Requisição via Gateway
 
 ```http
-GET http://localhost:8765/service-produto/produto/3/BRL
+GET http://localhost:8765/produto-service/produto/3/BRL
 ```
 
 Resposta esperada:
@@ -246,6 +262,7 @@ Este projeto foi desenvolvido com foco em **aprendizado prático**, abordando:
 * API Gateway e roteamento
 * Load balancing
 * Comunicação entre serviços
+* Documentação automática com Swagger/OpenAPI
 * Boas práticas com Spring Cloud
 
 ---
