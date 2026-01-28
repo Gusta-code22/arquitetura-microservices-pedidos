@@ -160,7 +160,7 @@ A documentação é gerada automaticamente pelo SpringDoc OpenAPI, que expõe po
 
 ---
 
- ###🌐 CORS (para Swagger “Try it out”)
+ ### 🌐 CORS (para Swagger “Try it out”)
 
 Para permitir que o Swagger UI execute chamadas (“Try it out”) sem bloqueio do navegador,
 o projeto configura CORS no API Gateway usando globalcors (política aplicada a todas as rotas).
