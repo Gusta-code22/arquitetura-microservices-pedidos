@@ -4,7 +4,12 @@ server:
 spring:
   application:
     name: service-preco
-
+  management:
+    tracing:
+      sampling:
+        probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411
 eureka:
   client:
     service-url:
@@ -22,6 +27,12 @@ resilience4j:
       service-preco:
         record-exceptions:
           - feign.FeignException
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 springdoc:
   api-docs:

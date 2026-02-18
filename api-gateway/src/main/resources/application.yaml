@@ -24,6 +24,18 @@ spring:
                 uri: lb://service-imposto
                 predicates:
                   - Path=/service-imposto/**
+  management:
+    tracing:
+      sampling:
+        probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 eureka:
   client:
     register-with-eureka: true

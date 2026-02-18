@@ -8,11 +8,19 @@ eureka:
 
 
 spring:
-
   application:
     name: service-imposto
+  management:
+    tracing:
+      sampling:
+        probability: 1.0
 springdoc:
   api-docs:
     path: /service-imposto/v3/api-docs
   swagger-ui:
     url: /service-imposto/v3/api-docs
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

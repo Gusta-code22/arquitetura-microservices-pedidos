@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 public interface ImpostoProxy {
 
     @GetMapping(value = "/service-imposto/{valor}/{moeda}")
-    @CircuitBreaker(name = "service-preco", fallbackMethod = "fallbackB")
+    @CircuitBreaker(name = "service-preco")
     @Retry(name = "service-preco")
     ImpostoDTO getImposto(
             @PathVariable("valor") BigDecimal valor,
