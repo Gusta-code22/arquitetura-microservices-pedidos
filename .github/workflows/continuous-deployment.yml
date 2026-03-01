@@ -24,3 +24,14 @@ jobs:
       with:
         distribution: 'temurin' # See 'Supported distributions' for available options
         java-version: '21'
+
+
+# Build - Temos dois processos de build. O primeiro,
+# com o run mvn spring-boot:build-image para aqules cujo configuracao
+# esta no pom.xml. ja a outra é com run clean package cujo utiliza
+# dockerfile.
+
+    - name: Build Eureka Naming Server Docker Image
+      working-directory: ./naming-server
+      run: mvn spring-boot:build-image
+
