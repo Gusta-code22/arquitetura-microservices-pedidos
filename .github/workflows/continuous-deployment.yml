@@ -39,7 +39,7 @@ jobs:
       working-directory: ./api-gateway
       run: mvn spring-boot:build-image
 
-    - name: Build Service Imposto Server Docker Image
+    - name: Build Service Imposto Docker Image
       working-directory: ./service-imposto
       run: mvn clean package
     
@@ -53,12 +53,12 @@ jobs:
 
     - name: Tag Docker images
       run: |
-        docker tag ${{secrets.DOCKER_USERNAME}}/naming-server:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/naming-server:latest
-        docker tag ${{secrets.DOCKER_USERNAME}}/naming-server:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/naming-server:${{github.RUN_ID}}
+        docker tag ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:latest
+        docker tag ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:${{github.RUN_ID}}
       
 
     - name: Push Docker Images to Docker Hub
       run: |
-        docker push ${{secrets.DOCKER_USERNAME}}/naming-server:latest
-        docker push ${{secrets.DOCKER_USERNAME}}/naming-server:${{github.RUN_ID}}
+        docker push ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:latest
+        docker push ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:${{github.RUN_ID}}
 
