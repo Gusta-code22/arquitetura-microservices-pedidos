@@ -35,3 +35,19 @@ jobs:
       working-directory: ./naming-server
       run: mvn spring-boot:build-image
 
+    - name: Build Api Gateway Docker Image
+      working-directory: ./api-gateway
+      run: mvn spring-boot:build-image
+
+    - name: Build Service Imposto Server Docker Image
+      working-directory: ./service-imposto
+      run: mvn clean package
+    
+    - name: Build Service Preco Docker Image
+      working-directory: ./service-preco
+      run: mvn clean package
+    
+    - name: Build Service Produto
+      working-directory: ./service-produto
+      run: mvn clean package
+
