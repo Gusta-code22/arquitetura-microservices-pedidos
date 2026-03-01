@@ -55,10 +55,30 @@ jobs:
       run: |
         docker tag ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:latest
         docker tag ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:${{github.RUN_ID}}
-      
-
+        
+        docker tag ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:latest
+        docker tag ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:${{github.RUN_ID}}
+        
+        docker tag ${{secrets.DOCKER_USERNAME}}/service-imposto-arquiterura:latest ${{secrets.DOCKER_USERNAME}}/service-imposto-arquiterura:${{github.RUN_ID}}
+        docker tag ${{secrets.DOCKER_USERNAME}}/service-preco-arquiterura:latest ${{secrets.DOCKER_USERNAME}}/service-preco-arquiterura:${{github.RUN_ID}}
+        docker tag ${{secrets.DOCKER_USERNAME}}/service-produto-arquiterura:latest ${{secrets.DOCKER_USERNAME}}/service-produto-arquiterura:${{github.RUN_ID}}
+        
     - name: Push Docker Images to Docker Hub
       run: |
         docker push ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:latest
         docker push ${{secrets.DOCKER_USERNAME}}/naming-server-arquitetura:${{github.RUN_ID}}
+        
+        docker push ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:latest
+        docker push ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:${{github.RUN_ID}} 
+        
+        docker push ${{secrets.DOCKER_USERNAME}}/service-imposto-arquitetura:latest
+        docker push ${{secrets.DOCKER_USERNAME}}/service-imposto-arquitetura:${{github.RUN_ID}}
+        
+        docker push ${{secrets.DOCKER_USERNAME}}/service-preco-arquitetura:latest
+        docker push ${{secrets.DOCKER_USERNAME}}/service-preco-arquitetura:${{github.RUN_ID}}
+        
+        docker push ${{secrets.DOCKER_USERNAME}}/service-produto-arquitetura:latest
+        docker push ${{secrets.DOCKER_USERNAME}}/service-produto-arquitetura:${{github.RUN_ID}}
+        
+        
 
