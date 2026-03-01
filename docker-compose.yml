@@ -1,0 +1,132 @@
+services:
+
+
+  zipkin-server:
+    image: openzipkin/zipkin:3.5.1
+    restart: always
+    ports:
+      - 9411:9411
+    networks:
+      - gusta-arquitetura-network
+
+  naming-server:
+    image: gustadev22/naming-server-arquitetura:0.0.1-SNAPSHOT
+    restart: always
+    ports:
+      - 8431:8431
+    depends_on:
+      - zipkin-server
+
+    networks:
+      - gusta-arquitetura-network
+    
+    
+  api-gateway:
+    image: gustadev22/api-gateway-arquitetura:0.0.1-SNAPSHOT
+    restart: always
+    ports:
+      - 8900:8900
+    environment:
+      SPRING_ZIPKIN_BASEURL: http://zipkin-server:9411
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://naming-server:8431/eureka
+      TZ: America/Sao_Paulo
+
+    depends_on:
+      - zipkin-server
+      - naming-server
+    networks:
+      - gusta-arquitetura-network
+
+  service-produto-db:
+    image: mysql:9.3.0
+    restart: always
+    environment:
+      TZ: America/Sao_Paulo
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: admin123
+      MYSQL_DATABASE: service_produto_db
+    ports:
+      - 8107:3306
+
+    networks:
+      - gusta-arquitetura-network
+
+  service-produto:
+    image: gustadev22/service-produto
+
+    build:
+      context: ./service-produto
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      SPRING_ZIPKIN_BASEURL: http://zipkin-server:9411
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://naming-server:8431/eureka
+      SPRING_DATASOURCE_URL: jdbc:mysql://service-produto-db:3306/service_produto_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&enabledTLSProtocols=TLSv1.2
+      SPRING_DATASOURCE_USER: docker
+      SPRING_DATASOURCE_PASSWORD: admin123
+    ports:
+      - 8001:8001
+    depends_on:
+      - zipkin-server
+      - naming-server
+      - service-produto-db
+      - api-gateway
+      - service-preco
+    networks:
+      - gusta-arquitetura-network
+
+  service-preco:
+    image: gustadev22/service-preco
+
+    build:
+      context: ./service-preco
+      dockerfile: Dockerfile
+
+    restart: always
+    environment:
+      SPRING_ZIPKIN_BASEURL: http://zipkin-server:9411
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://naming-server:8431/eureka
+      TZ: America/Sao_Paulo
+
+    depends_on:
+      - zipkin-server
+      - naming-server
+      - api-gateway
+      - service-imposto
+    ports:
+      - 8002:8002
+
+    networks:
+      - gusta-arquitetura-network
+
+  service-imposto:
+    image: gustadev22/service-imposto
+    build:
+      context: ./service-imposto
+      dockerfile: Dockerfile
+
+    restart: always
+    environment:
+      SPRING_ZIPKIN_BASEURL: http://zipkin-server:9411
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://naming-server:8431/eureka
+      TZ: America/Sao_Paulo
+    ports:
+      - 8003:8003
+    depends_on:
+      - zipkin-server
+      - naming-server
+      - api-gateway
+    networks:
+      - gusta-arquitetura-network
+
+
+
+
+
+
+
+networks:
+  gusta-arquitetura-network:
+    name: gusta-arquitetura-network
+    driver: bridge

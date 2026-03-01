@@ -4,123 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7258de38-1e50-4a01-b24b-7aef316b9823" name="Changes" comment="refactor: Adicionar GlobalExceptionHandler para padronizacao de Erros">
-      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="29a45b07-218a-470d-952d-29ec3b03f9f7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/github/io/Gusta_code22/Startup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/github/io/Gusta_code22/config/CorsConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/github/io/Gusta_code22/filter/LoggingFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../naming-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../naming-server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../naming-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../naming-server/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/target/classes/github/io/Gusta_code22/Startup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/target/naming-server-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/target/naming-server-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/Startup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/common/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/controller/ImpostoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/dto/ImpostoDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/enviroment/InstanceInformationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/exception/MoedaNaoSuportadaException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/io/Gusta_code22/service/ImpostoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/service-imposto-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/service-imposto-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-preco/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/proxy/ImpostoProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/proxy/ImpostoProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-preco/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/Startup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/controller/PrecoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/dto/ImpostoDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/dto/PrecoDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/enviroment/InstanceInformationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/proxy/ImpostoProxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/classes/github/io/Gusta_code22/service/PrecoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/service-preco-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/target/service-preco-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-produto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-produto/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-produto/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-produto/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-produto/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-produto/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/db/migration/V1__create_table_produto.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/db/migration/V2__insert_produtos.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/Startup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/common/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/controller/ProdutoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/dto/PrecoDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/dto/ProdutoDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/entity/Produto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/exception/MoedaInvalidaException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/exception/ProdutoNaoEncontradoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/proxy/PrecoProxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/repository/ProdutoRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/classes/github/io/Gusta_code22/service/ProdutoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/service-produto-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-produto/target/service-produto-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,8 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Exception" />
-        <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -139,7 +37,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {}
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Gusta-code22&quot;
+  }
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -148,179 +49,61 @@
   }
 }</component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
 }</component>
-  <component name="ProjectId" id="37z8mKeX7b7Y2FxOYhYsPEJ904T" />
+  <component name="ProjectId" id="39uUPH5IdXzQgTawKQOyq8fa6oF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Startup 8903.executor": "Run",
-    "Application.Startup.executor": "Run",
-    "Maven.service-imposto [clean,install].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/PC/Cursos/Estudo-Microservices/arquitetura-microservices-pedidos/service-imposto",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Startup.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Cursos/Estudo-Microservices/arquitetura-microservices-pedidos/service-imposto/pom.xml&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Startup 8903">
-    <configuration name="Startup 8903" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="github.io.Gusta_code22.Startup" />
+}</component>
+  <component name="RunManager">
+    <configuration name="Startup" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="service-imposto" />
-      <option name="VM_PARAMETERS" value="-Dserver.port=8903" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="github.io.Gusta_code22.Startup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.io.Gusta_code22.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Startup" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="github.io.Gusta_code22.Startup" />
-      <module name="service-imposto" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.Startup" />
-      <item itemvalue="Application.Startup 8903" />
-    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Startup" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7258de38-1e50-4a01-b24b-7aef316b9823" name="Changes" comment="" />
-      <created>1767894696358</created>
+      <changelist id="29a45b07-218a-470d-952d-29ec3b03f9f7" name="Changes" comment="" />
+      <created>1771545423775</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1767894696358</updated>
+      <updated>1771545423775</updated>
     </task>
-    <task id="LOCAL-00001" summary="Primeiras configuracoes no projeto">
-      <option name="closed" value="true" />
-      <created>1767895107010</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1767895107010</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Adicionando a estrutura de pacotes">
-      <option name="closed" value="true" />
-      <created>1767895227667</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1767895227667</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Adicionando mais dependecias como o Lombok e o DevTools">
-      <option name="closed" value="true" />
-      <created>1767895456768</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1767895456768</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Adicionando e concluindo o primerio microservice do projeto, junto com o service e controller 200% alinhados">
-      <option name="closed" value="true" />
-      <created>1767897272244</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1767897272244</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Adicioando a classe InstanceInformationService para recuperar em qual ambiente esta usando nosso microservice">
-      <option name="closed" value="true" />
-      <created>1767897339201</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1767897339201</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Adicioando a classe InstanceInformationService para recuperar em qual ambiente esta usando nosso microservice">
-      <option name="closed" value="true" />
-      <created>1767897404615</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1767897404615</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Mais Alteracoes e conclusoes do ImpostoService">
-      <option name="closed" value="true" />
-      <created>1767897434197</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1767897434197</updated>
-    </task>
-    <task id="LOCAL-00008" summary="refactor: melhorar tratamento de erro de moeda inválida no imposto-service">
-      <option name="closed" value="true" />
-      <created>1767972608710</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1767972608710</updated>
-    </task>
-    <task id="LOCAL-00009" summary="refactor: Adicionar GlobalExceptionHandler para padronizacao de Erros">
-      <option name="closed" value="true" />
-      <created>1767972830784</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1767972830784</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
-    <option featureType="dependencySupport" implementationName="executable:docker" />
-    <option featureType="dependencySupport" implementationName="executable:kubectl" />
-    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
-    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Primeiras configuracoes no projeto" />
-    <MESSAGE value="Adicionando a estrutura de pacotes" />
-    <MESSAGE value="Adicionando mais dependecias como o Lombok e o DevTools" />
-    <MESSAGE value="Adicionando e concluindo o primerio microservice do projeto, junto com o service e controller 200% alinhados" />
-    <MESSAGE value="Adicioando a classe InstanceInformationService para recuperar em qual ambiente esta usando nosso microservice" />
-    <MESSAGE value="Mais Alteracoes e conclusoes do ImpostoService" />
-    <MESSAGE value="refactor: melhorar tratamento de erro de moeda inválida no imposto-service" />
-    <MESSAGE value="refactor: Adicionar GlobalExceptionHandler para padronizacao de Erros" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Adicionar GlobalExceptionHandler para padronizacao de Erros" />
   </component>
 </project>
