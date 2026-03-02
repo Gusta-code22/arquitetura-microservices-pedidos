@@ -62,7 +62,7 @@ jobs:
         docker tag ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:latest
         docker tag ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:${{github.RUN_ID}}
         
-        docker tag ${{secrets.DOCKER_USERNAME}}/service-imposto:latest ${{secrets.DOCKER_USERNAME}}/${{github.RUN_ID}}
+        docker tag ${{secrets.DOCKER_USERNAME}}/service-imposto:latest ${{secrets.DOCKER_USERNAME}}/service-imposto:${{github.RUN_ID}}
         docker tag ${{secrets.DOCKER_USERNAME}}/service-preco:latest ${{secrets.DOCKER_USERNAME}}/service-preco:${{github.RUN_ID}}
         docker tag ${{secrets.DOCKER_USERNAME}}/service-produto:latest ${{secrets.DOCKER_USERNAME}}/service-produto:${{github.RUN_ID}}
         
