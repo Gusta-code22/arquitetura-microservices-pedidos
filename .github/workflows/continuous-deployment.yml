@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Login to Docker Hub
       uses: docker/login-action@v3
@@ -71,15 +71,15 @@ jobs:
         
         docker push ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:latest
         docker push ${{secrets.DOCKER_USERNAME}}/api-gateway-arquitetura:${{github.RUN_ID}} 
-#        
+    
 #        docker push ${{secrets.DOCKER_USERNAME}}/service-imposto:latest
 #        docker push ${{secrets.DOCKER_USERNAME}}/service-imposto:${{github.RUN_ID}}
-##
+
         docker push ${{secrets.DOCKER_USERNAME}}/service-preco:latest
         docker push ${{secrets.DOCKER_USERNAME}}/service-preco:${{github.RUN_ID}}
 
         docker push ${{secrets.DOCKER_USERNAME}}/service-produto:latest
         docker push ${{secrets.DOCKER_USERNAME}}/service-produto:${{github.RUN_ID}}
-#        
-#        
+     
+     
 
