@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a20fe63-4fc8-43d1-8212-406219578be1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.github/workflows/continuous-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/continuous-deployment.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-imposto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-imposto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-imposto/src/main/java/github/io/Gusta_code22/enviroment/InstanceInformationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-imposto/src/main/java/github/io/Gusta_code22/enviroment/InstanceInformationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-imposto/src/main/java/github/io/Gusta_code22/service/ImpostoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-imposto/src/main/java/github/io/Gusta_code22/service/ImpostoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/enviroment/InstanceInformationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/enviroment/InstanceInformationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/service/PrecoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/service/PrecoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/proxy/ImpostoProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/proxy/ImpostoProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-produto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-produto/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

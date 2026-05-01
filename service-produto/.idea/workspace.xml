@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="168e8d4c-69bc-4b8a-9db3-b8b65d249815" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.github/workflows/continuous-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/continuous-deployment.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-imposto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-imposto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-imposto/src/main/java/github/io/Gusta_code22/enviroment/InstanceInformationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-imposto/src/main/java/github/io/Gusta_code22/enviroment/InstanceInformationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-imposto/src/main/java/github/io/Gusta_code22/service/ImpostoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-imposto/src/main/java/github/io/Gusta_code22/service/ImpostoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-preco/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/enviroment/InstanceInformationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/enviroment/InstanceInformationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/service/PrecoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/service/PrecoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
