@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.math.BigDecimal;
 
-@FeignClient(name = "exchange-service", url = "${EXCHANGE_SERVICE_SERVICE_HOST:http://host.docker.internal}:8000")
+@FeignClient(name = "service-imposto", url = "${SERVICE_IMPOSTO_SERVICE_HOST:http://host.docker.internal}:8003")
 //@FeignClient(name = "service-imposto")
 public interface ImpostoProxy {
 
