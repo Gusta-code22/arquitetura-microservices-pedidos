@@ -5,20 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="168e8d4c-69bc-4b8a-9db3-b8b65d249815" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../naming-server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/github/io/Gusta_code22/Startup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/github/io/Gusta_code22/config/ApiGatewayConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/github/io/Gusta_code22/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/github/io/Gusta_code22/config/ZipkinCustomSenderConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/github/io/Gusta_code22/filter/LoggingFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/api-gateway-arquitetura-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/api-gateway-arquitetura-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/github/io/Gusta_code22/Startup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/github/io/Gusta_code22/config/CorsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/github/io/Gusta_code22/config/ZipkinCustomSenderConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/github/io/Gusta_code22/filter/LoggingFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../naming-server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../naming-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../naming-server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/src/main/java/github/io/Gusta_code22/Startup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/src/main/java/github/io/Gusta_code22/config/ZipkinCustomSenderConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../naming-server/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-imposto/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-imposto/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-imposto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-imposto/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-imposto/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-imposto/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-imposto/src/main/java/github/io/Gusta_code22/config/ZipkinCustomSenderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-imposto/src/main/java/github/io/Gusta_code22/config/ZipkinCustomSenderConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-imposto/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-imposto/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-preco/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-preco/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/config/ZipkinCustomSenderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/config/ZipkinCustomSenderConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/proxy/ImpostoProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/src/main/java/github/io/Gusta_code22/proxy/ImpostoProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-preco/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-preco/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/config/ZipkinCustomSenderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/config/ZipkinCustomSenderConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/proxy/PrecoProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/io/Gusta_code22/proxy/PrecoProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,12 +78,12 @@
     &quot;assignee&quot;: &quot;Gusta-code22&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Gusta-code22/arquitetura-microservices-pedidos.git&quot;,
-    &quot;accountId&quot;: &quot;ab2326b6-8e06-4eea-b254-d04b7b1ebfbd&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Gusta-code22/arquitetura-microservices-pedidos",
+    "accountId": "7f0e3749-796e-4631-ada7-2e11a78a37b5"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -58,20 +93,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Startup.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Cursos/Estudo-Microservices/arquitetura-microservices-pedidos/service-produto/pom.xml&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Startup.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/mac_gusta/JavaProjects/arquitetura-microservices-pedidos/service-produto/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Startup" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
@@ -109,5 +151,8 @@
       <updated>1771545450308</updated>
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

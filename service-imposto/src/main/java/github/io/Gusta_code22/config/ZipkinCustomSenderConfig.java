@@ -1,3 +1,4 @@
+/*
 package github.io.Gusta_code22.config;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -20,3 +21,4 @@ public class ZipkinCustomSenderConfig {
                 .build();
     }
 }
+*/

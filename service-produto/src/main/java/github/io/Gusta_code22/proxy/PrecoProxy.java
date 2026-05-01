@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.math.BigDecimal;
 
-@FeignClient(name = "service-preco")
+//@FeignClient(name = "service-preco")
+@FeignClient(name = "exchange-service", url = "${EXCHANGE_SERVICE_SERVICE_HOST:http://host.docker.internal}:8000")
 public interface PrecoProxy {
 
     @GetMapping(value = "/service-preco/{valor}/{moeda}")
