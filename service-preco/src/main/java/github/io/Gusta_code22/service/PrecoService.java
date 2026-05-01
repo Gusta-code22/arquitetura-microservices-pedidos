@@ -22,9 +22,14 @@ public class PrecoService {
 
         ImpostoDTO imposto = impostoProxy.getImposto(valor, moeda);
 
+        String port = informationService.retrieveServerPort();
+        String host = informationService.retrieveInstanceInfo();
+
         PrecoDTO precoFinal = new PrecoDTO();
         precoFinal.setValorFinal(imposto.getValorFinal());
-        precoFinal.setAmbiente("PRECO PORT: " + informationService.retrieveServerPort() + " IMPOSTO PORT: " + imposto.getAmbiente());
+        precoFinal.setAmbiente(String.format(
+                "HOST: %s | PORT: %s | VERSION: Kube-V2 | Service-imposto HOST: %s",
+                host, port, imposto.getAmbiente()));
         precoFinal.setMoeda(moeda);
         precoFinal.setValorImposto(imposto.getValorImposto());
         precoFinal.setValorBase(valor);

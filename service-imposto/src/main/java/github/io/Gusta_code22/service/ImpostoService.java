@@ -29,12 +29,18 @@ public class ImpostoService {
 
         BigDecimal valorFinal = valorInicial.add(imposto);
 
+        String port = informationService.retrieveServerPort();
+        String host = informationService.retrieveInstanceInfo();
+
         ImpostoDTO impostoResponse = new ImpostoDTO();
         impostoResponse.setTaxa(taxa);
         impostoResponse.setValorImposto(imposto);
         impostoResponse.setValorFinal(valorFinal);
         impostoResponse.setValorBase(valorInicial);
-        impostoResponse.setAmbiente(informationService.retrieveServerPort());
+        impostoResponse.setAmbiente(String.format(
+                "HOST:  | PORT: %s | VERSION: Kube-V2",
+                host, port
+                ));
         return impostoResponse;
 
 
